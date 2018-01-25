@@ -11,8 +11,7 @@
 	<script src="vendors/angular-material.min.js"></script>
 	<!-- SCRIPTS -->
 	<script src="scripts/client.js"></script>
-	<script src="scripts/controllers/search.controller.js"></script>
-	<script src="scripts/controllers/random.controller.js"></script>
+	<script src="scripts/controllers/add.controller.js"></script>
 	<script src="/scripts/service/giphy.service.js"></script>
 	
 	<!-- STYLING -->
@@ -20,7 +19,8 @@
 </head>
 <body ng-app="hrApp">
 
-<nav ng-include = "'/views/templates/nav.html'"></nav>
+<nav ng-include = "'/views/templates/nav.html'">
+</nav>
 <main ng-view></main>
 
 </body>
