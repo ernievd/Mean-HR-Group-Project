@@ -15,7 +15,7 @@ let employeeSchema = new mongoose.Schema(
 
 // Define our Model
 // mongoose.model( name of the collection, schema definition)
-let Game = mongoose.model('Employee', employeeSchema);
+let Employee = mongoose.model('Employee', employeeSchema);
 
 // GET route
 
