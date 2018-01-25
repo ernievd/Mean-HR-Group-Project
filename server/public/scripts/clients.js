@@ -1,0 +1,1 @@
+var hrApp = angular.module('App', []);
