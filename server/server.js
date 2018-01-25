@@ -14,7 +14,7 @@ app.use(bodyParser.json()); // needed for angular requests
 const mongoose = require('mongoose');
 
 // 27017 is the default mongo port number
-const databaseUrl = 'mongodb://localhost:27017/gamestop';
+const databaseUrl = 'mongodb://localhost:27017/hr_employees';
 
 // connect to mongoDB
 mongoose.connect(databaseUrl);
