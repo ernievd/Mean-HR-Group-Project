@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const reportsRouter = require('./routes/reports.router');
 const trackRouter = require('./routes/track.router');
 const addRouter = require('./routes/add.router');
 // const ***** = require('./routes/*****');
@@ -10,6 +11,7 @@ app.use(express.static('server/public/'));
 app.use(bodyParser.json()); // needed for angular requests
 
 /** ---------- EXPRESS ROUTES ---------- **/
+app.use('/reports', reportsRouter);
 app.use('/track', trackRouter);
 app.use('/employees', addRouter);
 

@@ -18,7 +18,7 @@ hrApp.config(function($routeProvider) {
             controller: 'ReportsController as vm'
         })
         .otherwise(
-            { redirectTo: '/add' }
+            { redirectTo: '/reports' }
         );
     
 });
