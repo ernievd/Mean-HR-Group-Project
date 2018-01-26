@@ -1,6 +1,6 @@
-<form class="frmEmployee">
-    <input type="text" ng-model="vm.newEmployee.name" class="name" placeholder="Name" />
-    <input type="number" ng-model="vm.newEmployee.idNumber" class="idNumber" placeholder="Id number" />
+<form name="employeeForm" class="frmEmployee">
+    <input type="text" ng-model="vm.newEmployee.name" class="name" placeholder="Name"required />
+    <input type="number" ng-model="vm.newEmployee.idNumber" class="idNumber" placeholder="Id number" required/>
     <input type="number" ng-model="vm.newEmployee.salary" class="salary" placeholder="Salary" />
     <input type="text" ng-model="vm.newEmployee.title" class="jobTitle" placeholder="Job title" />
     <input type="date" ng-model="vm.newEmployee.hireDate" class="hireDate" placeholder="Hire Date">
