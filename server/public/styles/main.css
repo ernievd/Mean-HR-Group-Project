@@ -167,7 +167,7 @@ label {
 	position: relative;
 	display: inline-block;
 	padding: 12px 24px;
-	margin-left: 54%; 
+	margin-left: 39%; 
 	font-size: 16px;
 	/* width: 100%; */
 	vertical-align: middle;
@@ -176,11 +176,28 @@ label {
 	border: 0;
 	background-color: rgb(167, 63, 49);
 	cursor: pointer;
+	width: 250px;
 }
 .trackList > li > p{
-	border-bottom: 2px solid rgb(119, 118, 118);
+	border-bottom: 2px solid rgba(77, 76, 76, 0.39);
 }
 
 .trackList {
 	list-style-type: none; 
+}
+
+.editButtons {
+	position: relative;
+	display: inline-block;
+	padding: 12px 24px;
+	margin-left: 15%; 
+	font-size: 16px;
+	/* width: 100%; */
+	vertical-align: middle;
+	text-align: center;
+	color: white;
+	border: 0;
+	background-color: rgb(44, 155, 199);
+	cursor: pointer;
+	width: 100px;
 }
