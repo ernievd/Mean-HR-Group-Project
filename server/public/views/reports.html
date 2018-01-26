@@ -4,9 +4,9 @@
 	<button class="btn btn-primary" ng-click="vm.getAverageSalary()">Get the Data</button>
 	<!--<p> Employee data object received back is: {{vm.employeeData}} </p>-->
 	<h3> -Salary Info- </h3>
-	<p>Average Salary : {{vm.salaryAverage}}</p>
-	<p>Maximum Salary : {{vm.maxSalary}}</p>
-	<p>Minimum Salary : {{vm.lowestSalary}}</p>
+	<p>Average Salary : {{vm.salaryAverage | currency:"$"}}</p>
+	<p>Maximum Salary : {{vm.maxSalary | currency:"$"}}</p>
+	<p>Minimum Salary : {{vm.lowestSalary | currency:"$"}}</p>
 
 
 	<p>Number of Employees: {{vm.count}}</p>
