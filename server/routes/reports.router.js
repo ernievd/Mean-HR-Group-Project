@@ -25,8 +25,8 @@ router.get('/dummydata', (req, res) => {
     // create an instnace of our model
     let employeeToAdd = new Employee({
 		name: 'Andrew Johnson',
-		idNumber: 134,
-		salary: 100000,
+		idNumber: 136,
+		salary: 15000,
 		title: 'Bossman',
 		hireDate: '2017-01-04'
 	});
