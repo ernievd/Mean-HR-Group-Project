@@ -59,6 +59,21 @@ router.get('/', (req, res) => {
 	});
 });
 
+// Count
+router.get('/count', (req, res) => {
+	console.log('hit reports count route');
+
+	Employee.count({}, (error, foundEmployees) => {
+        if (error) {
+            console.log('error on save: ', error);
+            res.sendStatus(500);
+        } else {
+            console.log('new Employee Document: ', foundEmployees);
+            res.send({count: foundEmployees});
+        }
+	});
+});
+
 
 // // GET average route
 // router.get('/average', (req, res) => {
