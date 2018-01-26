@@ -59,6 +59,31 @@ router.get('/', (req, res) => {
 	});
 });
 
+
+// // GET average route
+// router.get('/average', (req, res) => {
+// 	console.log('hit reports GET average route');
+// 	Employee.aggregate({
+// 		"$group": {
+// 			"_id": null,
+// 			"avg_Salary": { "$avg": "$salary" }
+// 			}
+// 		} , (error, averageFound) => {
+// 		if (error) {
+// 			console.log('error on save: ', error);
+// 			res.sendStatus(500);
+// 		} else {
+// 			console.log('Got the average: ', averageFound);
+// 			res.send(averageFound);
+// 		}
+// 	});
+//
+// });
+
+
+
+
+
 // POST route
 
 
