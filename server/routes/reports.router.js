@@ -76,6 +76,22 @@ router.get('/count', (req, res) => {
 });
 
 
+// List
+router.get('/list', (req, res) => {
+	console.log('hit reports count route');
+
+	Employee.find({}).sort({title: 'asc'}).exec( (error, foundEmployees) => {
+        if (error) {
+            console.log('error on save: ', error);
+            res.sendStatus(500);
+        } else {
+            console.log('new Employee Document: ', foundEmployees);
+            res.send({employeesList: foundEmployees});
+        }
+	});
+});
+
+
 // // GET average route
 // router.get('/average', (req, res) => {
 // 	console.log('hit reports GET average route');

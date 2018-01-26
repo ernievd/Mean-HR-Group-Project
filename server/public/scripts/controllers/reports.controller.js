@@ -2,6 +2,18 @@ hrApp.controller('ReportsController', [ '$http', function($http) {
 	const self = this;
 
 
+	self.getEmployeeList = function() {
+		$http.get('reports/list')
+			.then (function (response) {
+				console.log('received employee count', response.data.count);
+				self.count = response.data.count;
+			})
+			.catch (function (response) {
+				console.log('error in employee count');
+			});
+	}
+
+
 	self.getEmployeeCount = function() {
 		$http.get('reports/count')
 			.then (function (response) {
