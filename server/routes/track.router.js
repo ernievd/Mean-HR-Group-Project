@@ -23,10 +23,41 @@ router.get('/', (req, res) => {
             console.log('error on find:', error);
             res.sendStatus(500);
         } else{
-            console.log('found game document:', employeeList);
+            console.log('Found Employees:', employeeList);
             res.send(employeeList);
         }
     });
 });
+
+router.put('/:id', (req, res) => {
+    Employee.findByIdAndUpdate(
+        {"_id": req.params.id},
+        {$set: req.body},
+        (error, updatedEmployee) =>{
+            if(error){
+                console.log('error on update:', error);
+                res.sendStatus(500);
+            } else{
+                console.log('Employee before it was updated:', updatedEmployee); 
+                res.sendStatus(200);
+            }
+        }
+    )
+});
+
+router.delete('/:id', (req, res) => {
+    Employee.findByIdAndRemove(
+        {"_id": req.params.id},
+        (error, deletedEmployee) =>{
+            if(error){
+                console.log('error on remove:', error);
+                res.sendStatus(500);
+            } else{
+                console.log('Employee removed:', deletedEmployee); 
+                res.sendStatus(200);
+            }
+        }
+    )
+})
 
 module.exports = router;

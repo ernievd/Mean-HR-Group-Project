@@ -19,13 +19,30 @@ hrApp.controller('TrackController', ['$http', function($http){
     }
 
     self.editEmployee = function(employee){
-        console.log('hey');
         employee.edit = false;
     }
 
     self.confirmEdit = function(employee){
-        console.log('There');
-        
+        $http.put(`/track/${employee._id}`, employee)
+            .then(function(response){
+                console.log('Put response', response);
+                employee.edit = true;
+                self.getEmployees();
+            })
+            .catch(function(response){
+                console.log('error on put', response); 
+            });   
+    }
+
+    self.deleteEmployee = function(employeeId){
+        $http.delete(`/track/${employeeId}`)
+            .then(function(response){
+                console.log('Delete Success:', response); 
+                self.getEmployees();
+            })
+            .catch(function(response){
+                console.log('error on Delete', response); 
+            });
     }
 
     self.getEmployees();
