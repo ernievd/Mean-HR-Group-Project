@@ -1,0 +1,20 @@
+<script src=""></script>
+
+<link rel="stylesheet" href="vendors/font-awesome-4.7.0/css/font-awesome.css">
+
+<div flex layout="row" layout-align="center center">
+    <div flex-sm="100" flex-gt-sm="90" flex-gt-md="70" flex-gt-lg="50" class="md-whiteframe-z2"></div>
+<md-content class="md-padding"></md-content>
+    <h1 class="empAddTitle" ><i class="fa fa-user fa-1x" aria-hidden="true"></i>Add Employee</h1>
+</div>
+<form name="EmployeeForm">
+    Name:
+    
+    <input type="text" ng-model="vm.newEmployee.name" class="inputLabel name" required /> ID #:
+    <input type="number" ng-model="vm.newEmployee.idNumber" class="inputLabel idNumber" required/> Salary:
+    <input type="number" ng-model="vm.newEmployee.salary" class="inputLabel salary" /> Job title:
+    <input type="text" ng-model="vm.newEmployee.title" class="inputLabel jobTitle" /> Hire date:
+    <input type="date" ng-model="vm.newEmployee.hireDate" class="inputLabel hireDate">
+    <button class="btnAddEmp button buttonBlue" ng-click="vm.addEmployee(vm.newEmployee)">
+        Add Employee</button>
+</form>

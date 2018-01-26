@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>HR Employee Data</title>
-	<script type="text/javascript" src="/vendors/angular.min.js"></script>
-	<script type="text/javascript" src="/vendors/angular-route.min.js"></script>
-	<script type="text/javascript" src="/scripts/client.js"></script>
-	<script src="/scripts/controllers/reports.controller.js"></script>
-
-
-	<link rel="stylesheet" href="/vendors/bootstrap.min.css" />
+	<title>HR App</title>
+	<!-- ANGULAR -->
+	<script src="vendors/angular.min.js"></script>
+	<script src="vendors/angular-route.min.js"></script>
+	<script src="vendors/angular-aria.min.js"></script>
+	<script src="vendors/angular-animate.min.js"></script>
+	<script src="vendors/angular-messages.min.js"></script>
+	<script src="vendors/angular-material.min.js"></script>
+	<!-- SCRIPTS -->
+	<script src="scripts/client.js"></script>
+	<script src="scripts/controllers/add.controller.js"></script>
+	<script src="scripts/controllers/track.controller.js"></script>
+	
+	<!-- STYLING -->
+	<link rel="stylesheet" href="styles/main.css">
 </head>
 <body ng-app="hrApp">
 
-<!--<nav ng-include = "'/views/templates/nav.html'">-->
+<nav ng-include="'/views/templates/nav.html'">
 </nav>
 <main ng-view></main>
 

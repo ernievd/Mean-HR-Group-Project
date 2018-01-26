@@ -1,0 +1,21 @@
+<h1>Track Employee</h1>
+
+<ul ng-repeat="employee in vm.employees">
+    <li ng-click="vm.editEmployee(employee)" ng-if="employee.edit">
+        <label for="name">Name: </label><p class="name">{{employee.name}}</p>
+        <label>ID Number: </label><p>{{employee.idNumber}}</p>
+        <label>Salary: </label> <p>{{employee.salary}}</p>
+        <label>Job Title: </label><p>{{employee.title}}</p>
+        <label>Date Hired: </label><p>{{employee.hireDate | date:"yyyy-MM-dd"}}</p>
+    </li>
+    <form ng-if="!employee.edit">
+            <label for="name">Name: </label><input type="text" ng-model="employee.name">
+            <label>ID Number: </label><p>{{employee.idNumber}}</p>
+            <label>Salary: </label><input type="text" ng-model="employee.salary">
+            <label>Job Title: </label><input type="text" ng-model="employee.title">
+            <label>Date Hired: </label><p>{{employee.hireDate | date:"yyyy-MM-dd"}}</p>
+            <button ng-click="vm.confirmEdit(employee)">Confirm</button>
+            <button ng-click="vm.getEmployees()">Cancel</button>
+    </form>
+    <button ng-click="vm.deleteEmployee(employee._id)">Delete Employee</button>
+</ul>
