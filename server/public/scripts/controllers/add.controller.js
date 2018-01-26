@@ -9,6 +9,7 @@ hrApp.controller('AddController', ['$http', function ($http) {
             .then(function (response) {
                 console.log('post response', response);
                 self.getEmployees();
+                self.newEmployee = {};
             })
             .catch(function (response) {
                 console.log('error on post', response);
