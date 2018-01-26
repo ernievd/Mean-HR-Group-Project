@@ -6,7 +6,7 @@ hrApp.config(function($routeProvider) {
     // define our client side routes
     $routeProvider
         .when('/add', {
-            templateUrl: '/views/add.controller.html',
+            templateUrl: '/views/add.html',
             controller: 'AddController as vm'
         })
         .when('/track', {

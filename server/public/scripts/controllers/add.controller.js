@@ -16,7 +16,7 @@ hrApp.controller('AddController', ['$http', function ($http) {
     }
 
     self.getEmployees = function() {
-        $http.get('/games')
+        $http.get('/employees')
             .then(function (response) {
                 // console.log('get response', response);
                 self.games = response.data;
