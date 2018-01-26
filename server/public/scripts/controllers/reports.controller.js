@@ -1,16 +1,7 @@
 hrApp.controller('ReportsController', [ '$http', function($http) {
 	const self = this;
 
-	self.getAverageSalary = function(){
-		$http.get('/reports')
-			.then (function (response) {
-				console.log('Received report average salary data response -', response);
-				self.employeeData = response.data;
-			})
-			.catch (function (response) {
-				console.log('Received report average salary error on get request')
-			})
-	}
+
 	self.getEmployeeCount = function() {
 		$http.get('reports/count')
 			.then (function (response) {
@@ -22,6 +13,26 @@ hrApp.controller('ReportsController', [ '$http', function($http) {
 			});
 	}
 	self.getEmployeeCount();
+
+
+self.getAverageSalary = function(){
+	$http.get('/reports')
+		.then (function (response) {
+			console.log('Received report average salary data response -', response);
+			self.employeeData = response.data;
+			let totalSalary = 0;
+			//Calculate the average salary
+			for (i=0; i < self.employeeData.length; i++){
+				totalSalary = totalSalary + self.employeeData[i].salary;
+			}
+			self.salaryAverage = Number(totalSalary) / Number(self.employeeData.length);
+
+		})
+		.catch (function (response) {
+			console.log('Received report average salary error on get request')
+		})
+}
+
 
 	// self.getAverageSalary = function(){
 	// 	$http.get('/reports/average')
