@@ -21,10 +21,25 @@ self.getAverageSalary = function(){
 			console.log('Received report average salary data response -', response);
 			self.employeeData = response.data;
 			let totalSalary = 0;
+			self.maxSalary = self.employeeData[0].salary
+			self.lowestSalary = self.employeeData[0].salary;
+
 			//Calculate the average salary
 			for (i=0; i < self.employeeData.length; i++){
 				totalSalary = totalSalary + self.employeeData[i].salary;
+				//Create if to get lowest salary
+				if (self.employeeData[i].salary < self.lowestSalary){
+					self.lowestSalary = self.employeeData[i].salary
+				}
+				//Create if to get max salary
+				if (self.employeeData[i].salary > self.lowestSalary){
+					self.maxSalary = self.employeeData[i].salary
+				}
+
 			}
+
+
+
 			self.salaryAverage = Number(totalSalary) / Number(self.employeeData.length);
 
 		})
