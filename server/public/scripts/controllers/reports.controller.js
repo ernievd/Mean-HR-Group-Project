@@ -19,6 +19,8 @@ hrApp.controller('ReportsController', [ '$http', function($http) {
 
 				self.employeeList = response.data.employeesList;
 			})
+
+
 			.catch (function (response) {
 				console.log('error in employee list', response);
 			});

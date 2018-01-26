@@ -29,22 +29,24 @@
 </div>
 <form name="EmployeeForm">
 
-	<input type="text" class="inputLabel name"  /> Average Salary : {{vm.salaryAverage | currency:"$"}}
-	<input type="text" class="inputLabel name"  /> Maximum Salary : {{vm.maxSalary | currency:"$"}}
-	<input type="text" class="inputLabel name"  /> Minimum Salary : {{vm.lowestSalary | currency:"$"}}
-	<!-- The below div will loop on every job title and give us a count-->
-	<div>
-	<p>Job Title:</p>
-	<p>Name of employee that have this title:</p>
-	</div>
+	<p> Average Salary : {{vm.salaryAverage | currency:"$"}}</p>
+	<p> Maximum Salary : {{vm.maxSalary | currency:"$"}}</p>
+	<p> Minimum Salary : {{vm.lowestSalary | currency:"$"}}</p>
+<p>
+</p>
+
+
 
 	<table>
+		<tr><th>Employee Name:</th> <th>Title:</th></tr>
 		<tr ng-repeat="employee in vm.employeeList">
+
+			<td>{{employee.name}}  </td>
 			<td>{{employee.title}}</td>
-			<td>{{employee.name}}</td>
+
 		</tr>
 	</table>
 
-</div>
+</form>
 
 
