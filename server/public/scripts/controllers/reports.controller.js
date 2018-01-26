@@ -6,6 +6,17 @@ hrApp.controller('ReportsController', [ '$http', function($http) {
 		$http.get('reports/list')
 			.then (function (response) {
 				console.log('received employee list', response.data.employeesList);
+
+				// let jobsList = response.data.employeesList;
+				// self.jobsList = [];
+				// for (let i = 0; i < jobsList; i++) {
+				// 	if (i > 0) {
+				// 		if (jobsList[i].title === jobsList[i-1].title) {
+				// 		}
+				// 	}
+				// 	self.jobsList.push()
+				// }
+
 				self.employeeList = response.data.employeesList;
 			})
 			.catch (function (response) {
