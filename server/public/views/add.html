@@ -1,33 +1,20 @@
-<form name="employeeForm" class="frmEmployee">
-    <input type="text" ng-model="vm.newEmployee.name" class="name" placeholder="Name"required />
-    <input type="number" ng-model="vm.newEmployee.idNumber" class="idNumber" placeholder="Id number" required/>
-    <input type="number" ng-model="vm.newEmployee.salary" class="salary" placeholder="Salary" />
-    <input type="text" ng-model="vm.newEmployee.title" class="jobTitle" placeholder="Job title" />
-    <input type="date" ng-model="vm.newEmployee.hireDate" class="hireDate" placeholder="Hire Date">
-    <button class="btnAddEmp" ng-click="vm.addEmployee(vm.newEmployee)">Add Employee</button>
-</form>
+<script src=""></script>
 
-<div class="employeeData">
-    <div ng-repeat="employee in vm.addEmployee" class="employeeDataList">
-        <p>
-            <h5>
-                <b>Name: </b>
-            </h5> {{employee.name}}</p>
-        <p>
-            <h5>
-                <b>ID Number: </b>
-            </h5> {{employee.idNumber}}</p>
-        <p>
-            <h5>
-                <b>Salary: </b>
-            </h5>{{employee.salary}}</p>
-        <p>
-            <h5>
-                <b>Job title: </b>
-            </h5>{{employee.title}}</p>
-        <p>
-            <h5>
-                <b>Hire date: </b>
-            </h5>{{employee.hireDate | date}}</p>
-    </div>
+<link rel="stylesheet" href="vendors/font-awesome-4.7.0/css/font-awesome.css">
+
+<div flex layout="row" layout-align="center center">
+    <div flex-sm="100" flex-gt-sm="90" flex-gt-md="70" flex-gt-lg="50" class="md-whiteframe-z2"></div>
+<md-content class="md-padding"></md-content>
+    <h1 class="empAddTitle" ><i class="fa fa-user fa-1x" aria-hidden="true"></i>Add Employee</h1>
 </div>
+<form name="EmployeeForm">
+    Name:
+    
+    <input type="text" ng-model="vm.newEmployee.name" class="inputLabel name" required /> ID #:
+    <input type="number" ng-model="vm.newEmployee.idNumber" class="inputLabel idNumber" required/> Salary:
+    <input type="number" ng-model="vm.newEmployee.salary" class="inputLabel salary" /> Job title:
+    <input type="text" ng-model="vm.newEmployee.title" class="inputLabel jobTitle" /> Hire date:
+    <input type="date" ng-model="vm.newEmployee.hireDate" class="inputLabel hireDate">
+    <button class="btnAddEmp button buttonBlue" ng-click="vm.addEmployee(vm.newEmployee)">
+        Add Employee</button>
+</form>

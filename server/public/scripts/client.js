@@ -10,11 +10,11 @@ hrApp.config(function($routeProvider) {
             controller: 'AddController as vm'
         })
         .when('/track', {
-            templateUrl: '/views/track.controller.html',
+            templateUrl: '/views/track.html',
             controller: 'TrackController as vm'
         })
         .when('/reports', {
-            templateUrl: '/views/reports.controller.html',
+            templateUrl: '/views/reports.html',
             controller: 'ReportsController as vm'
         })
         .otherwise(
