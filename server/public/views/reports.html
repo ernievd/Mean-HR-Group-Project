@@ -1,21 +1,43 @@
 
-<div ng-controller="ReportsController as vm">
-	<h1>Reports View</h1>
-	<p></p>
-	<h3> -Salary Info- </h3>
-	<p>Average Salary : {{vm.salaryAverage | currency:"$"}}</p>
-	<p>Maximum Salary : {{vm.maxSalary | currency:"$"}}</p>
-	<p>Minimum Salary : {{vm.lowestSalary | currency:"$"}}</p>
+<!--<div ng-controller="ReportsController as vm">-->
+	<!--<h1>Reports View</h1>-->
+	<!--<p></p>-->
+	<!--<h3> -Salary Info- </h3>-->
+	<!--<p>Average Salary : {{vm.salaryAverage | currency:"$"}}</p>-->
+	<!--<p>Maximum Salary : {{vm.maxSalary | currency:"$"}}</p>-->
+	<!--<p>Minimum Salary : {{vm.lowestSalary | currency:"$"}}</p>-->
 
 
-	<p>Number of Employees: {{vm.count}}</p>
+	<!--<p>Number of Employees: {{vm.count}}</p>-->
 
+	<!--&lt;!&ndash; The below div will loop on every job title and give us a count&ndash;&gt;-->
+	<!--<div>-->
+	<!--<p>Job Title:</p>-->
+	<!--<p>Name of employee that have this title:</p>-->
+	<!--</div>-->
+
+<!--</div>-->
+
+
+
+<link rel="stylesheet" href="vendors/font-awesome-4.7.0/css/font-awesome.css">
+
+<div flex layout="row" layout-align="center center">
+	<div flex-sm="100" flex-gt-sm="90" flex-gt-md="70" flex-gt-lg="50" class="md-whiteframe-z2"></div>
+	<md-content class="md-padding"></md-content>
+	<h1 class="empAddTitle" ><i class="fa fa-user fa-1x" aria-hidden="true"></i>Salary Details</h1>
+</div>
+<form name="EmployeeForm">
+
+	<input type="text" class="inputLabel name"  /> Average Salary : {{vm.salaryAverage | currency:"$"}}
+	<input type="text" class="inputLabel name"  /> Maximum Salary : {{vm.maxSalary | currency:"$"}}
+	<input type="text" class="inputLabel name"  /> Minimum Salary : {{vm.lowestSalary | currency:"$"}}
 	<!-- The below div will loop on every job title and give us a count-->
 	<div>
 	<p>Job Title:</p>
 	<p>Name of employee that have this title:</p>
 	</div>
-	
+
 	<table>
 		<tr ng-repeat="employee in vm.employeeList">
 			<td>{{employee.title}}</td>
