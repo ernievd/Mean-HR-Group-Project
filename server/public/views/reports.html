@@ -16,7 +16,12 @@
 	<p>Job Title:</p>
 	<p>Name of employee that have this title:</p>
 	</div>
-
+	
+	<table>
+		<tr ng-repeat="employee in vm.employeeList">
+			<td>{{employee.title}}: {{employee.name}}</td>
+			</tr>
+	</table>
 
 </div>
 
