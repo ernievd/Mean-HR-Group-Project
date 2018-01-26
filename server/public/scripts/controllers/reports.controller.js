@@ -40,13 +40,15 @@ self.getAverageSalary = function(){
 
 
 
-			self.salaryAverage = Number(totalSalary) / Number(self.employeeData.length);
+			salaryAverage = Number(totalSalary) / Number(self.employeeData.length);
+			self.salaryAverage = salaryAverage.toFixed(2)
 
 		})
 		.catch (function (response) {
 			console.log('Received report average salary error on get request')
 		})
 }
+	self.getAverageSalary();
 
 
 	// self.getAverageSalary = function(){
