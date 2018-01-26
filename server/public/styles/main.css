@@ -114,7 +114,7 @@ label {
   position: relative;
   display: inline-block;
   padding: 12px 24px;
-  margin: 1em 0 1em 2em;
+  margin: 1em 0 1em 0em;
   width: 100%;
   vertical-align: middle;
   color: #ffffff;
@@ -130,7 +130,6 @@ label {
   transition: all 0.15s ease;
 }
 .button:focus { outline: 0; }
-
 
 /* Button modifiers */
 
