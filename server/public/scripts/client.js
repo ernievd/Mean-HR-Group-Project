@@ -1,4 +1,4 @@
-var hrApp = angular.module('App', ['ngRoute']);
+var hrApp = angular.module('hrApp', ['ngRoute']);
 
 // app configuration
 hrApp.config(function($routeProvider) {
