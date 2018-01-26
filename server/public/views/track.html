@@ -1,1 +1,11 @@
 <h1>Track Employee</h1>
+
+<ul>
+    <li ng-repeat="employee in vm.employees">
+        <label for="name">Name: </label><p class="name">{{employee.name}}</p>
+        <label>ID Number: </label><p>{{employee.idNumber}}</p>
+        <label>Salary: </label> <p>{{employee.salary}}</p>
+        <label>Job Title: </label><p>{{employee.title}}</p>
+        <label>Date Hired: </label><p>{{employee.hireDate | date:"yyyy-MM-dd"}}</p>
+    </li>
+</ul>

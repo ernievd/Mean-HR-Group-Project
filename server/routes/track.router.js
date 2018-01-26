@@ -17,5 +17,16 @@ let employeeSchema = new mongoose.Schema(
 // mongoose.model( name of the collection, schema definition)
 let Employee = mongoose.model('Employee', employeeSchema);
 
+router.get('/', (req, res) => {
+    Employee.find({}, (error, employeeList) => {
+        if(error){
+            console.log('error on find:', error);
+            res.sendStatus(500);
+        } else{
+            console.log('found game document:', employeeList);
+            res.send(employeeList);
+        }
+    });
+});
 
 module.exports = router;

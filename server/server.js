@@ -1,14 +1,14 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-// const ***** = require('./routes/*****');
+const trackRouter = require('./routes/track.router');
 
 /** ---------- MIDDLEWARE ---------- **/
 app.use(express.static('server/public/'));
 app.use(bodyParser.json()); // needed for angular requests
 
 /** ---------- EXPRESS ROUTES ---------- **/
-// app.use('/games', gameRouter);
+app.use('/track', trackRouter);
 
 /** ---------- MONGOOSE ------------ **/
 const mongoose = require('mongoose');
