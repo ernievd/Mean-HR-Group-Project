@@ -1,18 +1,24 @@
 
-<h1>Reports View</h1>
+<div ng-controller="ReportsController as vm">
+	<h1>Reports View</h1>
+	<button class="btn btn-primary" ng-click="vm.getAverageSalary()">Get the Data</button>
+	<p> Employee data object received back is: {{vm.employeeData}} </p>
+	<p> Average salary is : {{vm.employeeAverageSalary}}</p>
+	<h3> -Salary Info- </h3>
+	<p>Average Salary:</p>
+	<p>Maximum:</p>
+	<p>Minimum:</p>
 
-<h3>Salary Info:</h3>
-<p>Average:</p>
-<p>Maximum:</p>
-<p>Minimum:</p>
+
+	<p>Number of Employees:</p>
+
+	<!-- The below div will loop on every job title and give us a count-->
+	<div>
+	<p>Job Title:</p>
+	<p>Name of employee that have this title:</p>
+	</div>
 
 
-<p>Number of Employees:</p>
-
-<!-- The below div will loop on every job title and give us a count-->
-<div>
-<p>Job Title:</p>
-<p>Name of employee that have this title:</p>
 </div>
 
 

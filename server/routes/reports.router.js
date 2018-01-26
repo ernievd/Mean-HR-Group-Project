@@ -24,11 +24,11 @@ router.get('/dummydata', (req, res) => {
 
     // create an instnace of our model
     let employeeToAdd = new Employee({
-		name: 'Andrew Johnson',
-		idNumber: 134,
-		salary: 100000,
-		title: 'Bossman',
-		hireDate: '2017-01-04'
+		name: 'Ernie Van Duyne',
+		idNumber: 147,
+		salary: 300000,
+		title: 'Programmer',
+		hireDate: '2018-02-28'
 	});
 
     // create a new Document in our database and collection
@@ -58,6 +58,31 @@ router.get('/', (req, res) => {
         }
 	});
 });
+
+
+// // GET average route
+// router.get('/average', (req, res) => {
+// 	console.log('hit reports GET average route');
+// 	Employee.aggregate({
+// 		"$group": {
+// 			"_id": null,
+// 			"avg_Salary": { "$avg": "$salary" }
+// 			}
+// 		} , (error, averageFound) => {
+// 		if (error) {
+// 			console.log('error on save: ', error);
+// 			res.sendStatus(500);
+// 		} else {
+// 			console.log('Got the average: ', averageFound);
+// 			res.send(averageFound);
+// 		}
+// 	});
+//
+// });
+
+
+
+
 
 // POST route
 
